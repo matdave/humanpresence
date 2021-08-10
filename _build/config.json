@@ -1,0 +1,39 @@
+{
+    "name": "HumanPresence",
+    "lowCaseName": "humanpresence",
+    "description": "Human Presence Hook for MODX FormIt",
+    "author": "matdave",
+    "version": "1.0.0-beta1",
+    "package": {
+      "elements": {
+        "snippets": [
+          {
+            "name": "HumanPresence.FormIt.Hook",
+            "file": "formit.hook.snippet.php"
+          }
+        ],
+        "plugins": [
+          {
+            "name": "HumanPresence.Plugin",
+            "file": "humanpresence.plugin.php"
+          }
+        ]
+      },
+      "systemSettings": [
+        {
+          "key": "apikey",
+          "type": "text-password",
+          "value": ""
+        },
+        {
+          "key": "confidence",
+          "value": "70"
+        }
+      ],
+      "build": {
+        "readme": "docs/readme.txt",
+        "license": "docs/license.txt",
+        "changelog": "docs/changelog.txt"
+      }
+    }
+  }

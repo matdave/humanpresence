@@ -8,7 +8,7 @@ config.core.php
 _packages/*.*
 !_packages/.gitignore
 !_packages/*.zip
-core/components/bluehook/model/vendor
+core/components/humanpresence/model/vendor
 
 # IDE files #
 #############
