@@ -3,13 +3,17 @@
     "lowCaseName": "humanpresence",
     "description": "Human Presence Hook for MODX FormIt",
     "author": "matdave",
-    "version": "1.0.0-beta1",
+    "version": "1.0.0-pl",
     "package": {
       "elements": {
         "snippets": [
           {
             "name": "HumanPresence.FormIt.Hook",
             "file": "formit.hook.snippet.php"
+          },
+          {
+            "name": "humanpresence",
+            "file": "output.modifier.snippet.php"
           }
         ],
         "plugins": [

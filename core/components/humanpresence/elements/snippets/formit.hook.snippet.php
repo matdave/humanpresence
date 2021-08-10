@@ -33,7 +33,7 @@ if ($presence) {
 }
 
 if ($debug) {
-    $modx->log(xPDO::LOG_LEVEL_ERROR, '[HumanPresence.FormIt.Hook] Unable to determine human presence level.');
+    $modx->log(xPDO::LOG_LEVEL_ERROR, '[HumanPresence.FormIt.Hook] Unable to determine human presence.');
 }
-$hook->addError('humanpresence', 'Unable to determine human presence level.');
+$hook->addError('humanpresence', 'Unable to determine human presence.');
 return false;
