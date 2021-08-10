@@ -15,7 +15,10 @@
         "plugins": [
           {
             "name": "HumanPresence.Plugin",
-            "file": "humanpresence.plugin.php"
+            "file": "humanpresence.plugin.php",
+            "events": [
+              "OnWebPagePrerender"
+            ]
           }
         ]
       },

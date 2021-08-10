@@ -15,5 +15,9 @@ if (!($humanpresence instanceof HumanPresence)) {
     $modx->log(xPDO::LOG_LEVEL_ERROR, '[HumanPresence.Plugin] Could not load humanpresence class.');
     return true;
 }
-
-$modx->regClientStartupScript('//script.metricode.com/wotjs/ellipsis.js?api_key='.$humanpresence->getOption('apikey'));
+switch ($modx->event->name) {
+    case 'OnWebPagePrerender':
+        $register = '<script src="//script.metricode.com/wotjs/ellipsis.js?api_key=' . $humanpresence->getOption('apikey').'" />';
+        $modx->resource->_output = preg_replace('/(<\/head>(?:<\/head>)?)/i', "{$register}\r\n$1", $modx->resource->_output);
+}
+return true;
