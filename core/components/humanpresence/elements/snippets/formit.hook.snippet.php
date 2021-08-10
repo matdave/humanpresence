@@ -22,8 +22,18 @@ if (!($humanpresence instanceof HumanPresence)) {
     }
 }
 
-if ($humanpresence->checkHumanPresence()) {
-    return true;
+$presence = $humanpresence->checkHumanPresence();
+if ($presence) {
+    if ($debug) {
+        $modx->log(xPDO::LOG_LEVEL_ERROR, '[HumanPresence.FormIt.Hook] presense detected:' . json_encode($presence));
+        return true;
+    } else {
+        return true;
+    }
+}
+
+if ($debug) {
+    $modx->log(xPDO::LOG_LEVEL_ERROR, '[HumanPresence.FormIt.Hook] Unable to determine human presence level.');
 }
 $hook->addError('humanpresence', 'Unable to determine human presence level.');
 return false;

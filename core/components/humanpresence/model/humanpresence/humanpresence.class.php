@@ -93,7 +93,7 @@ class HumanPresence
             if (isset($response['confidence']) && $response['confidence'] >
                 $this->getOption('confidence')) {
 // Passes the human test, let's process the form
-                return true;
+                return $response;
             }
         }
         return false;
