@@ -14,7 +14,7 @@ $humanpresence = $modx->getService(
 $false = $options ?? "<!-- -->";
 
 if (!($humanpresence instanceof HumanPresence)) {
-    $modx->log(xPDO::LOG_LEVEL_ERROR, '[HumanPresence.FormIt.Hook] Could not load humanpresence class.');
+    $modx->log(xPDO::LOG_LEVEL_ERROR, '[HumanPresence.Output.Modifier] Could not load humanpresence class.');
     return $false;
 }
 
